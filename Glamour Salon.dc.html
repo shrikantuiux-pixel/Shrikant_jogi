@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Poppins:wght@300;400;500;600&family=Sacramento&display=swap" rel="stylesheet">
+<script src="image-slot.js"></script>
+<style>
+  *{box-sizing:border-box;}
+  html{scroll-behavior:smooth;}
+  body{margin:0;background:#f1e9e0;}
+  image-slot{display:block;}
+  @keyframes gfadeUp{from{opacity:0;transform:translateY(34px);}to{opacity:1;transform:translateY(0);}}
+  @keyframes gmarquee{from{transform:translateX(0);}to{transform:translateX(-50%);}}
+  @keyframes gmarqueeR{from{transform:translateX(-50%);}to{transform:translateX(0);}}
+</style>
+</helmet>
+
+<div style="font-family:'Poppins',system-ui,sans-serif;background:#f1e9e0;color:#2b2622;overflow-x:hidden;width:100%;">
+
+  <!-- NAV -->
+  <nav style="position:sticky;top:0;z-index:100;display:flex;align-items:center;justify-content:space-between;padding:18px 40px;background:#fffdfb;border-bottom:1px solid rgba(122,46,53,0.08);">
+    <a href="#ghome" style="font-family:'Cormorant Garamond',serif;font-weight:600;font-size:30px;letter-spacing:0.16em;color:#9c5b5b;text-decoration:none;">GLAMOUR</a>
+    <div style="display:flex;align-items:center;gap:38px;font-size:15px;color:#3a322e;">
+      <details style="position:relative;">
+        <summary style="list-style:none;cursor:pointer;display:flex;align-items:center;gap:6px;">Menu <span style="font-size:10px;color:#9c5b5b;">&#9662;</span></summary>
+        <div style="position:absolute;top:30px;left:-10px;min-width:170px;padding:8px;background:#fff;border:1px solid rgba(0,0,0,0.07);border-radius:10px;box-shadow:0 14px 34px rgba(0,0,0,0.10);">
+          <a href="#ggallery" style="display:block;padding:9px 12px;border-radius:7px;color:#3a322e;text-decoration:none;font-size:14px;" style-hover="background:#f5ece6;">Download Menu</a>
+        </div>
+      </details>
+      <a href="#gteam" style="color:#3a322e;text-decoration:none;" style-hover="color:#9c5b5b;">Join as an Expert</a>
+      <a href="#gpartners" style="color:#3a322e;text-decoration:none;" style-hover="color:#9c5b5b;">About Us</a>
+      <a href="#gfooter" style="color:#3a322e;text-decoration:none;" style-hover="color:#9c5b5b;">Contact Us</a>
+      <a href="#ghome" aria-label="Cart" style="color:#3a322e;display:flex;align-items:center;" style-hover="color:#9c5b5b;">
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="9" cy="20" r="1.4"></circle><circle cx="18" cy="20" r="1.4"></circle><path d="M2 3h2.2l2 12.4a1.6 1.6 0 0 0 1.6 1.3h9.1a1.6 1.6 0 0 0 1.6-1.3L21 7H5"></path></svg>
+      </a>
+      <details style="position:relative;">
+        <summary style="list-style:none;cursor:pointer;display:flex;align-items:center;gap:9px;">
+          Hi, Shrikant
+          <span style="width:26px;height:26px;border-radius:50%;overflow:hidden;display:inline-block;border:1px solid rgba(0,0,0,0.1);"><img src="assets/shrikant.jpeg" alt="" style="width:100%;height:100%;object-fit:cover;display:block;"></span>
+          <span style="font-size:10px;color:#9c5b5b;">&#9662;</span>
+        </summary>
+        <div style="position:absolute;top:38px;right:0;min-width:160px;padding:8px;background:#fff;border:1px solid rgba(0,0,0,0.07);border-radius:10px;box-shadow:0 14px 34px rgba(0,0,0,0.10);">
+          <a href="#ghome" style="display:block;padding:9px 12px;border-radius:7px;color:#3a322e;text-decoration:none;font-size:14px;" style-hover="background:#f5ece6;">Profile</a>
+          <a href="#ghome" style="display:block;padding:9px 12px;border-radius:7px;color:#3a322e;text-decoration:none;font-size:14px;" style-hover="background:#f5ece6;">Booking</a>
+          <a href="Portfolio 2026.dc.html" style="display:block;padding:9px 12px;border-radius:7px;color:#3a322e;text-decoration:none;font-size:14px;" style-hover="background:#f5ece6;">Logout</a>
+        </div>
+      </details>
+    </div>
+  </nav>
+
+  <!-- HERO -->
+  <section id="ghome" style="position:relative;background:#f1e9e0;overflow:hidden;">
+    <div style="display:grid;grid-template-columns:1fr 1fr;align-items:stretch;min-height:620px;">
+      <div style="position:relative;display:flex;align-items:flex-end;">
+        <div style="position:absolute;inset:0;background-image:url('data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 width=%2272%22 height=%2272%22 viewBox=%220 0 72 72%22%3E%3Ctext x=%2210%22 y=%2238%22 font-family=%22Cormorant Garamond, serif%22 font-size=%2230%22 fill=%22%23b98b8b%22 opacity=%220.55%22%3EG%3C/text%3E%3Ctext x=%2246%22 y=%2274%22 font-family=%22Cormorant Garamond, serif%22 font-size=%2230%22 fill=%22%23b98b8b%22 opacity=%220.55%22 transform=%22rotate(180 56 64)%22%3EG%3C/text%3E%3C/svg%3E');opacity:0.6;"></div>
+        <image-slot id="g_hero_model" src="https://images.unsplash.com/photo-1488426862026-3ee34a7d66df?auto=format&fit=crop&w=800&q=80" style="position:relative;width:74%;height:560px;margin-left:13%;" shape="rect" placeholder="Hero model"></image-slot>
+      </div>
+      <div data-greveal style="display:flex;flex-direction:column;justify-content:center;align-items:flex-start;padding:60px 80px;">
+        <div style="font-family:'Poppins';font-weight:300;letter-spacing:0.34em;font-size:18px;color:#6b5f59;margin-left:6px;">GET GLAMMED AT</div>
+        <div style="font-family:'Cormorant Garamond',serif;font-weight:500;font-size:84px;line-height:0.9;letter-spacing:0.04em;color:#9c5b5b;margin:6px 0 40px;">GLAMOUR</div>
+        <div style="display:flex;gap:18px;flex-wrap:wrap;">
+          <a href="#gteam" style="padding:18px 30px;border-radius:6px;background:#7a2e35;color:#fff;text-decoration:none;text-align:center;transition:transform .3s,box-shadow .3s;" style-hover="transform:translateY(-3px);box-shadow:0 16px 30px rgba(122,46,53,0.28);">
+            <div style="font-size:16px;font-weight:500;">Book a Chair</div>
+            <div style="font-size:11px;opacity:0.8;margin-top:3px;">(For an Expert to book a seat)</div>
+          </a>
+          <a href="#gteam" style="padding:18px 30px;border-radius:6px;background:transparent;border:1px solid #7a2e35;color:#7a2e35;text-decoration:none;text-align:center;transition:background .3s,color .3s;" style-hover="background:#7a2e35;color:#fff;">
+            <div style="font-size:16px;font-weight:500;">Book an Appointment</div>
+            <div style="font-size:11px;opacity:0.8;margin-top:3px;">(For a customer to book a service)</div>
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <!-- TRANSFORMATION BAND -->
+    <div style="position:relative;display:grid;grid-template-columns:1fr 1fr;align-items:center;padding:30px 0 0;">
+      <div data-greveal style="padding:50px 80px;">
+        <div style="font-family:'Poppins';font-weight:400;letter-spacing:0.22em;font-size:19px;color:#5a504a;">EXPERIENCE THE ART OF TRANSFORMATION</div>
+        <div style="font-family:'Poppins';font-weight:600;letter-spacing:0.06em;font-size:30px;color:#2b2622;margin-top:18px;">TAILORED EXPERIENCES FOR</div>
+        <div style="font-family:'Poppins';font-weight:600;letter-spacing:0.10em;font-size:30px;color:#9c2f37;margin-top:4px;">HIM &amp; HER</div>
+      </div>
+      <div style="position:relative;height:430px;">
+        <div style="position:absolute;inset:0;background-image:url('data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 width=%2272%22 height=%2272%22 viewBox=%220 0 72 72%22%3E%3Ctext x=%2210%22 y=%2238%22 font-family=%22Cormorant Garamond, serif%22 font-size=%2230%22 fill=%22%23c49a9a%22 opacity=%220.5%22%3EG%3C/text%3E%3Ctext x=%2246%22 y=%2274%22 font-family=%22Cormorant Garamond, serif%22 font-size=%2230%22 fill=%22%23c49a9a%22 opacity=%220.5%22 transform=%22rotate(180 56 64)%22%3EG%3C/text%3E%3C/svg%3E');"></div>
+        <div style="position:relative;display:flex;flex-direction:column;gap:8px;width:150px;margin-left:30px;">
+          <image-slot id="g_tx1" src="https://images.unsplash.com/photo-1604654894610-df63bc536371?auto=format&fit=crop&w=400&q=80" style="width:150px;height:130px;" shape="rect" placeholder="Hands"></image-slot>
+          <image-slot id="g_tx2" src="https://images.unsplash.com/photo-1599351431202-1e0f0137899a?auto=format&fit=crop&w=400&q=80" style="width:150px;height:130px;" shape="rect" placeholder="Grooming"></image-slot>
+          <image-slot id="g_tx3" src="https://images.unsplash.com/photo-1556228578-8c89e6adf883?auto=format&fit=crop&w=400&q=80" style="width:150px;height:130px;" shape="rect" placeholder="Facial"></image-slot>
+        </div>
+      </div>
+    </div>
+    <!-- SCRIPT MARQUEE -->
+    <div style="overflow:hidden;padding:18px 0 40px;-webkit-mask-image:linear-gradient(90deg,transparent,#000 8%,#000 92%,transparent);mask-image:linear-gradient(90deg,transparent,#000 8%,#000 92%,transparent);">
+      <div style="display:flex;width:max-content;animation:gmarquee 26s linear infinite;font-family:'Sacramento',cursive;font-size:52px;color:#9c5b5b;">
+        <div style="display:flex;gap:46px;padding-right:46px;white-space:nowrap;"><span>get glammed at glamour</span><span>get glammed at glamour</span><span>get glammed at glamour</span></div>
+        <div style="display:flex;gap:46px;padding-right:46px;white-space:nowrap;" aria-hidden="true"><span>get glammed at glamour</span><span>get glammed at glamour</span><span>get glammed at glamour</span></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- TEAM -->
+  <section id="gteam" style="background:#fffdfb;padding:84px 40px 96px;">
+    <h2 data-greveal style="font-family:'Cormorant Garamond',serif;font-weight:600;font-size:44px;color:#7a2e35;text-align:center;margin:0 0 56px;">Meet Our Skilled Professionals</h2>
+    <div style="display:flex;gap:18px;justify-content:center;align-items:center;max-width:1240px;margin:0 auto;flex-wrap:wrap;">
+      <div data-greveal style="position:relative;width:130px;height:230px;border-radius:14px;overflow:hidden;flex:0 0 auto;transition:transform .4s;" style-hover="transform:translateY(-6px);"><image-slot id="g_team1" src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?auto=format&fit=crop&w=400&q=80" style="width:100%;height:100%;" shape="rect" placeholder=""></image-slot></div>
+      <div data-greveal data-greveal-delay="80" style="position:relative;width:400px;height:262px;border-radius:16px;overflow:hidden;flex:0 0 auto;box-shadow:0 22px 44px rgba(0,0,0,0.16);">
+        <image-slot id="g_team_feat" src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=700&q=80" style="width:100%;height:100%;" shape="rect" placeholder="Featured stylist"></image-slot>
+        <div style="position:absolute;inset:0;background:linear-gradient(180deg,transparent 45%,rgba(0,0,0,0.55));pointer-events:none;"></div>
+        <div style="position:absolute;left:24px;bottom:22px;color:#fff;pointer-events:none;">
+          <div style="font-family:'Poppins';font-weight:600;font-size:26px;">Ryan Miland</div>
+          <div style="font-family:'Poppins';font-weight:300;font-size:16px;opacity:0.9;">Sr. Stylist</div>
+        </div>
+      </div>
+      <div data-greveal data-greveal-delay="120" style="position:relative;width:130px;height:230px;border-radius:14px;overflow:hidden;flex:0 0 auto;transition:transform .4s;" style-hover="transform:translateY(-6px);"><image-slot id="g_team2" src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&w=400&q=80" style="width:100%;height:100%;" shape="rect" placeholder=""></image-slot></div>
+      <div data-greveal data-greveal-delay="160" style="position:relative;width:130px;height:230px;border-radius:14px;overflow:hidden;flex:0 0 auto;transition:transform .4s;" style-hover="transform:translateY(-6px);"><image-slot id="g_team3" src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?auto=format&fit=crop&w=400&q=80" style="width:100%;height:100%;" shape="rect" placeholder=""></image-slot></div>
+      <div data-greveal data-greveal-delay="200" style="position:relative;width:130px;height:230px;border-radius:14px;overflow:hidden;flex:0 0 auto;transition:transform .4s;" style-hover="transform:translateY(-6px);"><image-slot id="g_team4" src="https://images.unsplash.com/photo-1544005313-94ddf0286df2?auto=format&fit=crop&w=400&q=80" style="width:100%;height:100%;" shape="rect" placeholder=""></image-slot></div>
+      <div data-greveal data-greveal-delay="240" style="position:relative;width:130px;height:230px;border-radius:14px;overflow:hidden;flex:0 0 auto;transition:transform .4s;" style-hover="transform:translateY(-6px);"><image-slot id="g_team5" src="https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?auto=format&fit=crop&w=400&q=80" style="width:100%;height:100%;" shape="rect" placeholder=""></image-slot></div>
+    </div>
+  </section>
+
+  <!-- PARTNERS -->
+  <section id="gpartners" style="position:relative;background:#efe6db;padding:74px 40px;text-align:center;overflow:hidden;">
+    <div style="font-family:'Poppins';font-weight:400;letter-spacing:0.18em;font-size:24px;color:#5a504a;">GLAMOUR SALON EXCLUSIVE PARTNERS</div>
+    <div style="font-family:'Sacramento',cursive;font-size:38px;color:#9c5b5b;margin-top:6px;">redefining glamour with every touch</div>
+    <div data-greveal style="display:flex;align-items:center;justify-content:center;gap:80px;margin-top:46px;flex-wrap:wrap;font-family:'Cormorant Garamond',serif;color:#7a4a44;">
+      <span style="font-size:40px;font-weight:600;">pH<sup style="font-size:16px;">+</sup></span>
+      <span style="font-size:24px;font-weight:700;letter-spacing:0.04em;">HAMER<br><span style="font-size:11px;letter-spacing:0.2em;">KHOJ ZAIRE</span></span>
+      <span style="font-family:'Poppins';font-size:34px;font-weight:600;letter-spacing:0.05em;">KEUNE</span>
+      <span style="font-size:34px;font-weight:700;letter-spacing:0.04em;">GK<sup style="font-size:12px;">&reg;</sup></span>
+    </div>
+  </section>
+
+  <!-- GALLERY -->
+  <section id="ggallery" style="background:#fffdfb;padding:84px 40px 96px;">
+    <h2 data-greveal style="font-family:'Cormorant Garamond',serif;font-weight:600;font-size:44px;color:#7a2e35;text-align:center;margin:0 0 52px;">Our Gallery</h2>
+    <div data-greveal style="max-width:1240px;margin:0 auto;display:grid;grid-template-columns:repeat(4,1fr);grid-auto-rows:188px;gap:18px;">
+      <image-slot id="g_gal1" src="https://images.unsplash.com/photo-1560066984-138dadb4c035?auto=format&fit=crop&w=500&q=80" style="width:100%;height:100%;grid-row:span 2;" shape="rounded" radius="14" placeholder=""></image-slot>
+      <image-slot id="g_gal2" src="https://images.unsplash.com/photo-1570172619644-dfd03ed5d881?auto=format&fit=crop&w=500&q=80" style="width:100%;height:100%;" shape="rounded" radius="14" placeholder=""></image-slot>
+      <image-slot id="g_gal3" src="https://images.unsplash.com/photo-1522337660859-02fbefca4702?auto=format&fit=crop&w=500&q=80" style="width:100%;height:100%;grid-row:span 2;" shape="rounded" radius="14" placeholder=""></image-slot>
+      <image-slot id="g_gal4" src="https://images.unsplash.com/photo-1633681926022-84c23e8cb2d6?auto=format&fit=crop&w=500&q=80" style="width:100%;height:100%;" shape="rounded" radius="14" placeholder=""></image-slot>
+      <image-slot id="g_gal5" src="https://images.unsplash.com/photo-1487412947147-5cebf100ffc2?auto=format&fit=crop&w=500&q=80" style="width:100%;height:100%;grid-row:span 2;" shape="rounded" radius="14" placeholder=""></image-slot>
+      <image-slot id="g_gal6" src="https://images.unsplash.com/photo-1562322140-8baeececf3df?auto=format&fit=crop&w=500&q=80" style="width:100%;height:100%;" shape="rounded" radius="14" placeholder=""></image-slot>
+      <image-slot id="g_gal7" src="https://images.unsplash.com/photo-1583001809873-a128495da465?auto=format&fit=crop&w=500&q=80" style="width:100%;height:100%;" shape="rounded" radius="14" placeholder=""></image-slot>
+      <image-slot id="g_gal8" src="https://images.unsplash.com/photo-1595476108010-b4d1f102b1b1?auto=format&fit=crop&w=500&q=80" style="width:100%;height:100%;" shape="rounded" radius="14" placeholder=""></image-slot>
+    </div>
+  </section>
+
+  <!-- GLAMOURBOOK -->
+  <section style="background:#ece8e4;display:grid;grid-template-columns:1fr 1fr;align-items:stretch;min-height:520px;">
+    <div data-greveal style="display:flex;flex-direction:column;justify-content:center;padding:70px 80px;">
+      <div style="font-family:'Poppins';font-weight:400;letter-spacing:0.22em;font-size:18px;color:#6b5f59;line-height:1.7;">EXPLORE OUR<br>EXCLUSIVE INTERNATIONAL RANGE AT</div>
+      <div style="font-family:'Cormorant Garamond',serif;font-weight:500;font-size:60px;letter-spacing:0.03em;color:#9c5b5b;margin:14px 0 30px;">GLAMOURBOOK</div>
+      <div style="font-family:'Sacramento',cursive;font-size:42px;color:#9c2f37;">glam &amp; shop till you drop!</div>
+    </div>
+    <image-slot id="g_book" src="https://images.unsplash.com/photo-1529626455594-4ff0802cfb7e?auto=format&fit=crop&w=800&q=80" style="width:100%;height:100%;min-height:520px;" shape="rect" placeholder="Models"></image-slot>
+  </section>
+
+  <!-- FAQ -->
+  <section style="background:#fffdfb;padding:80px 40px 90px;">
+    <h2 data-greveal style="font-family:'Cormorant Garamond',serif;font-weight:600;font-size:46px;color:#7a2e35;text-align:center;margin:0 0 6px;">FAQ</h2>
+    <p data-greveal style="text-align:center;color:#6b5f59;font-size:16px;margin:0 0 44px;">Frequently asked questions about Glamour Salon</p>
+    <div data-greveal style="max-width:980px;margin:0 auto;">
+      <details open style="border-top:1px solid rgba(0,0,0,0.10);padding:22px 6px;">
+        <summary style="list-style:none;cursor:pointer;display:flex;align-items:center;gap:18px;font-family:'Poppins';font-weight:600;font-size:17px;color:#2b2622;">
+          <span style="width:22px;height:22px;border:1px solid #2b2622;border-radius:4px;display:inline-flex;align-items:center;justify-content:center;flex:0 0 auto;font-size:15px;">&minus;</span>
+          What is the purpose of the partner portal?
+        </summary>
+        <p style="margin:16px 0 0 40px;color:#6b5f59;font-size:15px;line-height:1.65;max-width:80ch;">The partner portal serves as a central hub for managing your salon listing and all bookings at one go! It provides access to resources, tools, and information to support your collaboration with customers.</p>
+      </details>
+      <details style="border-top:1px solid rgba(0,0,0,0.10);padding:22px 6px;">
+        <summary style="list-style:none;cursor:pointer;display:flex;align-items:center;gap:18px;font-family:'Poppins';font-weight:600;font-size:17px;color:#2b2622;">
+          <span style="width:22px;height:22px;border:1px solid #2b2622;border-radius:4px;display:inline-flex;align-items:center;justify-content:center;flex:0 0 auto;font-size:15px;">+</span>
+          How do I create an account on the business portal?
+        </summary>
+        <p style="margin:16px 0 0 40px;color:#6b5f59;font-size:15px;line-height:1.65;max-width:80ch;">Click &ldquo;Join as an Expert&rdquo; in the top navigation, fill in your salon and contact details, verify your email, and our team will activate your business account.</p>
+      </details>
+      <details style="border-top:1px solid rgba(0,0,0,0.10);padding:22px 6px;">
+        <summary style="list-style:none;cursor:pointer;display:flex;align-items:center;gap:18px;font-family:'Poppins';font-weight:600;font-size:17px;color:#2b2622;">
+          <span style="width:22px;height:22px;border:1px solid #2b2622;border-radius:4px;display:inline-flex;align-items:center;justify-content:center;flex:0 0 auto;font-size:15px;">+</span>
+          I forgot my password. How can I reset it?
+        </summary>
+        <p style="margin:16px 0 0 40px;color:#6b5f59;font-size:15px;line-height:1.65;max-width:80ch;">On the login screen, select &ldquo;Forgot password,&rdquo; enter your registered email, and follow the secure reset link we send you to set a new password.</p>
+      </details>
+      <details style="border-top:1px solid rgba(0,0,0,0.10);padding:22px 6px;">
+        <summary style="list-style:none;cursor:pointer;display:flex;align-items:center;gap:18px;font-family:'Poppins';font-weight:600;font-size:17px;color:#2b2622;">
+          <span style="width:22px;height:22px;border:1px solid #2b2622;border-radius:4px;display:inline-flex;align-items:center;justify-content:center;flex:0 0 auto;font-size:15px;">+</span>
+          What information do I need to complete my salon profile?
+        </summary>
+        <p style="margin:16px 0 0 40px;color:#6b5f59;font-size:15px;line-height:1.65;max-width:80ch;">Add your salon name, address, working hours, service menu with pricing, team profiles, and a few gallery photos so customers can discover and book you with confidence.</p>
+      </details>
+      <details style="border-top:1px solid rgba(0,0,0,0.10);border-bottom:1px solid rgba(0,0,0,0.10);padding:22px 6px;">
+        <summary style="list-style:none;cursor:pointer;display:flex;align-items:center;gap:18px;font-family:'Poppins';font-weight:600;font-size:17px;color:#2b2622;">
+          <span style="width:22px;height:22px;border:1px solid #2b2622;border-radius:4px;display:inline-flex;align-items:center;justify-content:center;flex:0 0 auto;font-size:15px;">+</span>
+          How do I update my business profile information?
+        </summary>
+        <p style="margin:16px 0 0 40px;color:#6b5f59;font-size:15px;line-height:1.65;max-width:80ch;">Head to your dashboard, open &ldquo;Profile,&rdquo; edit any field &mdash; hours, services, photos, or team &mdash; and save. Changes go live on your public listing instantly.</p>
+      </details>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer id="gfooter" style="background:#eceae8;padding:60px 40px 30px;">
+    <div style="max-width:1240px;margin:0 auto;display:grid;grid-template-columns:1.4fr 1fr 1.2fr 1fr;gap:40px;">
+      <div>
+        <div style="font-family:'Cormorant Garamond',serif;font-weight:600;font-size:32px;letter-spacing:0.14em;color:#9c5b5b;">GLAMOUR</div>
+        <p style="color:#6b5f59;font-size:14px;line-height:1.6;margin:16px 0 18px;max-width:34ch;">Stay connected to receive exclusive offers and the latest updates directly in your inbox</p>
+        <form onSubmit="{{ noop }}" style="display:flex;gap:10px;max-width:340px;">
+          <input type="email" placeholder="Your Email" style="flex:1;padding:13px 15px;border:1px solid rgba(0,0,0,0.15);border-radius:7px;font-family:'Poppins';font-size:14px;background:#fff;outline:none;">
+          <button type="submit" aria-label="Subscribe" style="width:48px;border:0;border-radius:7px;background:#111;color:#fff;cursor:pointer;display:flex;align-items:center;justify-content:center;transition:background .3s;" style-hover="background:#7a2e35;">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"></path><path d="M13 6l6 6-6 6"></path></svg>
+          </button>
+        </form>
+      </div>
+      <div style="display:flex;flex-direction:column;gap:14px;font-size:14px;">
+        <a href="#gpartners" style="color:#3a322e;text-decoration:none;font-weight:500;" style-hover="color:#9c5b5b;">About Us</a>
+        <a href="#gteam" style="color:#3a322e;text-decoration:none;font-weight:500;" style-hover="color:#9c5b5b;">Join as an Expert</a>
+        <a href="#gfooter" style="color:#3a322e;text-decoration:none;font-weight:500;" style-hover="color:#9c5b5b;">Terms &amp; Conditions</a>
+        <a href="#gfooter" style="color:#3a322e;text-decoration:none;font-weight:500;" style-hover="color:#9c5b5b;">Privacy Policy</a>
+        <a href="#gfooter" style="color:#3a322e;text-decoration:none;font-weight:500;" style-hover="color:#9c5b5b;">Refund Policy</a>
+      </div>
+      <div style="font-size:14px;">
+        <div style="font-weight:600;color:#2b2622;margin-bottom:16px;">Contact us</div>
+        <div style="display:flex;align-items:flex-start;gap:10px;color:#6b5f59;margin-bottom:13px;"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="#9c5b5b" stroke-width="1.6" style="margin-top:2px;flex:0 0 auto;"><circle cx="12" cy="12" r="9"></circle><path d="M12 7v5l3 2"></path></svg>11:00 AM to 08:00 PM</div>
+        <div style="display:flex;align-items:flex-start;gap:10px;color:#6b5f59;margin-bottom:13px;"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="#9c5b5b" stroke-width="1.6" style="margin-top:2px;flex:0 0 auto;"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3 19.5 19.5 0 0 1-6-6 19.8 19.8 0 0 1-3-8.6A2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1.9.4 1.8.7 2.7a2 2 0 0 1-.5 2.1L8.1 9.9a16 16 0 0 0 6 6l1.4-1.2a2 2 0 0 1 2.1-.5c.9.3 1.8.6 2.7.7a2 2 0 0 1 1.7 2z"></path></svg>+91 9311519168</div>
+        <div style="display:flex;align-items:flex-start;gap:10px;color:#6b5f59;margin-bottom:13px;"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="#9c5b5b" stroke-width="1.6" style="margin-top:2px;flex:0 0 auto;"><rect x="3" y="5" width="18" height="14" rx="2"></rect><path d="M3.5 7l8.5 6 8.5-6"></path></svg>support@glamour.salon</div>
+        <div style="display:flex;align-items:flex-start;gap:10px;color:#6b5f59;"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="#9c5b5b" stroke-width="1.6" style="margin-top:2px;flex:0 0 auto;"><path d="M21 10c0 6-9 12-9 12s-9-6-9-12a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg>1st Floor, M Block, Greater Kailash I, New Delhi, 110048</div>
+      </div>
+      <div>
+        <div style="font-weight:600;color:#2b2622;margin-bottom:16px;">Follow Us</div>
+        <div style="display:flex;gap:14px;">
+          <a href="#gfooter" aria-label="Instagram" style="width:42px;height:42px;border-radius:50%;background:#111;color:#fff;display:flex;align-items:center;justify-content:center;text-decoration:none;transition:background .3s,transform .3s;" style-hover="background:#7a2e35;transform:translateY(-3px);"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><rect x="3" y="3" width="18" height="18" rx="5"></rect><circle cx="12" cy="12" r="4"></circle><circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"></circle></svg></a>
+          <a href="#gfooter" aria-label="Facebook" style="width:42px;height:42px;border-radius:50%;background:#111;color:#fff;display:flex;align-items:center;justify-content:center;text-decoration:none;transition:background .3s,transform .3s;" style-hover="background:#7a2e35;transform:translateY(-3px);"><svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M14 9h2.5l.5-3H14V4.5c0-.9.3-1.5 1.6-1.5H17V.3C16.7.2 15.8.1 14.8.1 12.6.1 11 1.5 11 4.1V6H8.5v3H11v9h3z"></path></svg></a>
+          <a href="#gfooter" aria-label="X" style="width:42px;height:42px;border-radius:50%;background:#111;color:#fff;display:flex;align-items:center;justify-content:center;text-decoration:none;transition:background .3s,transform .3s;" style-hover="background:#7a2e35;transform:translateY(-3px);"><svg width="17" height="17" viewBox="0 0 24 24" fill="currentColor"><path d="M18 2h3l-7 8 8 12h-6l-5-7-5 7H1l8-9L1 2h6l4 6zm-1 18h2L8 4H6z"></path></svg></a>
+        </div>
+      </div>
+    </div>
+    <div style="text-align:center;color:#8a807a;font-size:13px;margin-top:44px;">&copy; 2023 Julian and Kal | All Rights Reserved</div>
+  </footer>
+
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script>
+class Component extends DCLogic {
+  componentDidMount(){
+    const reveal = (el)=>{ el.style.opacity='1'; el.style.transform='none'; };
+    const els = Array.from(document.querySelectorAll('[data-greveal]'));
+    els.forEach(el=>{
+      el.style.opacity='0';
+      el.style.transform='translateY(38px)';
+      el.style.transition='opacity 1s cubic-bezier(.2,.7,.2,1), transform 1s cubic-bezier(.2,.7,.2,1)';
+      el.style.willChange='opacity, transform';
+    });
+    if(!('IntersectionObserver' in window)){ els.forEach(reveal); return; }
+    const io = new IntersectionObserver((entries)=>{
+      entries.forEach(e=>{
+        if(e.isIntersecting){
+          const d = parseFloat(e.target.getAttribute('data-greveal-delay')||'0');
+          setTimeout(()=>reveal(e.target), d);
+          io.unobserve(e.target);
+        }
+      });
+    }, {threshold:0.12, rootMargin:'0px 0px -7% 0px'});
+    els.forEach(el=>io.observe(el));
+    setTimeout(()=>els.forEach(el=>{ if(el.style.opacity==='0') reveal(el); }), 2600);
+  }
+  renderVals(){ return { noop: (e)=>{ if(e) e.preventDefault(); } }; }
+}
+</script>
+</body>
+</html>
